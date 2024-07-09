@@ -11,8 +11,8 @@ module top_module(
     genvar i;
     
   	generate
-        for(i=1; i<100; i++) begin : block
-            bcd_fadd inst( .a(a[4*i+3 : 4*i]), .b(b[4*i+3 : 4*i]), .cin(cout_temp[i-1]), .cout(cout_temp[i]), .sum(sum[4*i+3 : 4*i]) );
+		for(i=1; i<100; i++) begin : BCD
+            		bcd_fadd inst( .a(a[4*i+3 : 4*i]), .b(b[4*i+3 : 4*i]), .cin(cout_temp[i-1]), .cout(cout_temp[i]), .sum(sum[4*i+3 : 4*i]) );
 		end
 	endgenerate
 	
